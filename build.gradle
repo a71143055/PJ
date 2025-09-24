@@ -10,18 +10,19 @@ description = 'PJ_submission_site'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
 configurations {
     compileOnly {
-        extendsFrom annotationProcessor
+        shouldResolveConsistentlyWith configurations.compileClasspath
     }
 }
 
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
