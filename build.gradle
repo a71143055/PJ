@@ -16,7 +16,7 @@ java {
 
 configurations {
     compileOnly {
-        shouldResolveConsistentlyWith configurations.compileClasspath
+        extendsFrom annotationProcessor
     }
 }
 
